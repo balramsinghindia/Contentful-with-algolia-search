@@ -14,13 +14,8 @@ export default function Index({ preview, allPosts }) {
   const client = algoliasearch('NRI69YQ3OY', '808785e1434cafc04021ac36e60f718d'); // this is admin key in Algolia
   const index = client.initIndex('posts');
 
-  
-  const sample = "Sample text balram"
-  let ab = '';
   // only query string
   index.search('Woman').then(({ hits }) => {
-    ab = "Yoa"
-    console.log(ab);
     console.log(hits);
   });
   return (
